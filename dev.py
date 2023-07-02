@@ -59,7 +59,7 @@ async def main_devchecker():
                 await app.edit_message_text(CHANNEL_ID, MESSAGE_ID, xxx_hehe)
                 print(f"Last checked on: {last_update}")
                 await app.send_message(GRP_ID, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{link}/{MESSAGE_ID}", disable_web_page_preview=True)
-                await asyncio.sleep(10)
+                await asyncio.sleep(545)
                         
 app.run(main_devchecker())
 
