@@ -20,7 +20,7 @@ BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split('
 
 async def main_devchecker():
     async with app:
-        link = await app.get_chat(CHANNEL_ID).username 
+        link = (await app.get_chat(CHANNEL_ID)).username 
         limk = link/MESSAGE_ID
         while True:
                 print("Checking...")
