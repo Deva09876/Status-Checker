@@ -18,12 +18,11 @@ app = Client(
 )
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
 
-link = await app.get_chat(CHANNEL_ID).username
-limk = link/MESSAGE_ID
-
 async def main_devchecker():
     async with app:
-            while True:
+        link = await app.get_chat(CHANNEL_ID).username 
+        limk = link/MESSAGE_ID
+        while True:
                 print("Checking...")
                 xxx_hehe = f"<b>**🏷 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {(await app.get_chat(CHANNEL_ID)).title} ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ**</b>\n\n 📈 | <b><u>ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs</u> 🍂</b>"
                 for bot in BOT_LIST:
