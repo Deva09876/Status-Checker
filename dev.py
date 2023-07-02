@@ -48,7 +48,6 @@ async def main_devchecker():
                         else:
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ ✨**"
                             await app.read_chat_history(bot)
-                            await app.send_message(GRP_ID, "ALL YOUR BOTS ARE WORKING FINE")
                     except FloodWait as e:
                         ttm = re.findall("\d{0,5}", str(e))
                         await asyncio.sleep(int(ttm))
@@ -57,6 +56,7 @@ async def main_devchecker():
                 daate = time.strftime(f"%d %b %Y")
                 xxx_hehe += f"\n\n☁<u>ʟᴀsᴛ ᴄʜᴇᴄᴋᴇᴅ ᴏɴ:</u>\n**ᴅᴀᴛᴇ: {daate}**\n**ᴛɪᴍᴇ: {last_update}**\n\n♻️ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.\n\n<b>**๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{(await app.get_chat(CHANNEL_ID)).username} ๏**</b>"
                 await app.edit_message_text(CHANNEL_ID, MESSAGE_ID, xxx_hehe)
+                await app.send_message(GRP_ID, "ALL YOUR BOTS ARE WORKING FINE AND STATUS REPO HAS BEEN FIXED")
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(540)
                         
