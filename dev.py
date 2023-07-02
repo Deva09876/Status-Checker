@@ -41,7 +41,7 @@ async def main_devchecker():
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 **Beep! Beep!! {bot} is down** ❌")
+                                    await app.send_message(bot_admin_id, f"🚨 **Beep! Beep!! {bot} is down** ❌")
                                 except Exception as c:
                                     print(c)
                             await app.read_chat_history(bot)
@@ -59,9 +59,9 @@ async def main_devchecker():
                 print(f"Last checked on: {last_update}")
                 for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{(await app.get_chat(CHANNEL_ID)).username/MESSAGE_ID}", disable_web_page_preview=True)
-                                except Exception as huh:
-                                    print(huh)
+                                    await app.send_message(bot_admin_id, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{(await app.get_chat(CHANNEL_ID)).username/MESSAGE_ID}", disable_web_page_preview=True)
+                                except Exception as k:
+                                    print(k)
                 await asyncio.sleep(540)
                         
 app.run(main_devchecker())
