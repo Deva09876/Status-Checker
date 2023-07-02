@@ -21,7 +21,6 @@ BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split('
 async def main_devchecker():
     async with app:
         link = (await app.get_chat(CHANNEL_ID)).username 
-        limk == link
         while True:
                 print("Checking...")
                 xxx_hehe = f"<b>**🏷 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {(await app.get_chat(CHANNEL_ID)).title} ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ**</b>\n\n 📈 | <b><u>ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs</u> 🍂</b>"
@@ -59,7 +58,7 @@ async def main_devchecker():
                 xxx_hehe += f"\n\n☁<u>ʟᴀsᴛ ᴄʜᴇᴄᴋᴇᴅ ᴏɴ:</u>\n**ᴅᴀᴛᴇ: {daate}**\n**ᴛɪᴍᴇ: {last_update}**\n\n♻️ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.\n\n<b>**๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{(await app.get_chat(CHANNEL_ID)).username} ๏**</b>"
                 await app.edit_message_text(CHANNEL_ID, MESSAGE_ID, xxx_hehe)
                 print(f"Last checked on: {last_update}")
-                await app.send_message(GRP_ID, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{limk}/MESSAGE_ID", disable_web_page_preview=True)
+                await app.send_message(GRP_ID, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{link}/MESSAGE_ID", disable_web_page_preview=True)
                 await asyncio.sleep(10)
                         
 app.run(main_devchecker())
