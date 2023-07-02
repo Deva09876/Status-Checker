@@ -57,11 +57,7 @@ async def main_devchecker():
                 xxx_hehe += f"\n\n☁<u>ʟᴀsᴛ ᴄʜᴇᴄᴋᴇᴅ ᴏɴ:</u>\n**ᴅᴀᴛᴇ: {daate}**\n**ᴛɪᴍᴇ: {last_update}**\n\n♻️ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 𝟷𝟶 ᴍɪɴᴜᴛᴇs.\n\n<b>**๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{(await app.get_chat(CHANNEL_ID)).username} ๏**</b>"
                 await app.edit_message_text(CHANNEL_ID, MESSAGE_ID, xxx_hehe)
                 print(f"Last checked on: {last_update}")
-                for bot_admin_id in BOT_ADMIN_IDS:
-                                try:
-                                    await app.send_message(bot_admin_id, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{(await app.get_chat(CHANNEL_ID)).username/MESSAGE_ID}", disable_web_page_preview=True)
-                                except Exception as k:
-                                    print(k)
+                await app.send_message(GRP_ID, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{(await app.get_chat(CHANNEL_ID)).username/MESSAGE_ID}")
                 await asyncio.sleep(10)
                         
 app.run(main_devchecker())
