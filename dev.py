@@ -38,14 +38,12 @@ async def main_devchecker():
                             bbb = ccc.id
                         if aaa == bbb:
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
-                            for BOT_ADMIN_ID in BOT_ADMIN_IDS:
-                                try:
-                                    await app.send_message(int(BOT_ADMIN_ID), f"**ᴋʏᴀ ᴋᴀʀ ʀᴀʜᴀ ʜᴀɪ 😡\n[{bot_info.first_name}](tg://user?id={bot_info.id}) ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.**")
-                                except Exception:...
+                            await app.send_message(int(BOT_ADMIN_ID), f"**ᴋʏᴀ ᴋᴀʀ ʀᴀʜᴀ ʜᴀɪ 😡\n[{bot_info.first_name}](tg://user?id={bot_info.id}) ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.**")
                             await app.read_chat_history(bot)
                         else:
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ ✨**"
                             await app.read_chat_history(bot)
+                            await app.send_message(GRP_ID, "ALL YOUR BOTS ARE WORKING FINE")
                     except FloodWait as e:
                         ttm = re.findall("\d{0,5}", str(e))
                         await asyncio.sleep(int(ttm))
