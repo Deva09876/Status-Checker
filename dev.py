@@ -59,7 +59,7 @@ async def main_devchecker():
                 print(f"Last checked on: {last_update}")
                 for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(bot_admin_id), f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{(await app.get_chat(CHANNEL_ID).username/MESSAGE_ID}")
+                                    await app.send_message(int(bot_admin_id), f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{(await app.get_chat(CHANNEL_ID)).username/MESSAGE_ID}", disable_web_page_preview=True)
                                 except Exception:
                                     pass
                 await asyncio.sleep(540)
