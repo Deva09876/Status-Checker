@@ -34,7 +34,7 @@ async def main_devchecker():
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.id
-                        await asyncio.sleep(15)
+                        await asyncio.sleep(5)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
@@ -42,7 +42,7 @@ async def main_devchecker():
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(bot_admin_id, f"🚨 **Beep! Beep!! {bot} is down** ❌")
+                                    await app.send_message(chat_id=bot_admin_id, f"🚨 **Beep! Beep!! {bot} is down** ❌")
                                 except Exception as c:
                                     print(c)
                             await app.read_chat_history(bot)
@@ -59,7 +59,7 @@ async def main_devchecker():
                 await app.edit_message_text(CHANNEL_ID, MESSAGE_ID, xxx_hehe)
                 print(f"Last checked on: {last_update}")
                 await app.send_message(GRP_ID, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{link}/{MESSAGE_ID}", disable_web_page_preview=True)
-                await asyncio.sleep(545)
+                await asyncio.sleep(580)
                         
 app.run(main_devchecker())
 
