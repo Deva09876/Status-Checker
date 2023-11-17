@@ -42,7 +42,7 @@ async def main_devchecker():
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(bot_admin_id, f"🚨 **Beep! Beep!! {bot} is down** ❌")
+                                    await app.send_message(GRP_ID, f"🚨 **Beep! Beep!! {bot} is down** ❌")
                                 except Exception as c:
                                     print(c)
                             await app.read_chat_history(bot)
