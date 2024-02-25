@@ -16,7 +16,7 @@ app = Client(
     api_hash = API_HASH,
     session_string = SESSION
 )
-BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
+Sudo = [int(i.strip()) for i in os.environ.get("Sudos").split(' ')]
 
 async def main_devchecker():
     async with app:
@@ -40,7 +40,7 @@ async def main_devchecker():
                             bbb = ccc.id
                         if aaa == bbb:
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
-                            for bot_admin_id in BOT_ADMIN_IDS:
+                            for bot_admin_id in Sudos:
                                 try:
                                     await app.send_message(GRP_ID, f"🚨 **Beep! Beep!! {bot} is down** ❌")
                                 except Exception as c:
