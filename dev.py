@@ -47,6 +47,9 @@ async def main_devchecker():
                                     off=dead.id
                                 if id == off:
                                     xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
+                            except FloodWait as e:
+                                ttm = re.findall("\d{0,5}", str(e))
+                                await asyncio.sleep(int(ttm))
                             try:
                                 await app.send_message(GRP_ID, f"🚨 **Beep! Beep!! {bot} is down** ❌")
                             except Exception as c:
