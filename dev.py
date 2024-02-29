@@ -16,7 +16,6 @@ app = Client(
     api_hash = API_HASH,
     session_string = SESSION
 )
-Sudo = [int(i.strip()) for i in os.environ.get("Sudos").split(' ')]
 
 async def main_devchecker():
     async with app:
@@ -34,17 +33,24 @@ async def main_devchecker():
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.id
-                        await asyncio.sleep(5)
+                        await asyncio.sleep(3)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
                         if aaa == bbb:
-                            xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
-                            for bot_admin_id in Sudos:
-                                try:
-                                    await app.send_message(GRP_ID, f"🚨 **Beep! Beep!! {bot} is down** ❌")
-                                except Exception as c:
-                                    print(c)
+                            try:
+                                again=await app.send_message(bot, "/start")
+                                id=again.id
+                                await asyncio.sleep(3)
+                                history=await app.get_chat_history(bot, limit=1)
+                                async for dead in history:
+                                    off=dead.id
+                                if id == off:
+                                    xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
+                            try:
+                                await app.send_message(GRP_ID, f"🚨 **Beep! Beep!! {bot} is down** ❌")
+                            except Exception as c:
+                                print(c)
                             await app.read_chat_history(bot)
                         else:
                             xxx_hehe += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ ✨**"
