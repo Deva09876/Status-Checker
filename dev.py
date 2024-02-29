@@ -42,7 +42,7 @@ async def main_devchecker():
                                 again=await app.send_message(bot, "/start")
                                 id=again.id
                                 await asyncio.sleep(3)
-                                history=await app.get_chat_history(bot, limit=1)
+                                history= app.get_chat_history(bot, limit=1)
                                 async for dead in history:
                                     off=dead.id
                                 if id == off:
