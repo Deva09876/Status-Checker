@@ -33,7 +33,7 @@ async def main_devchecker():
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.id
-                        await asyncio.sleep(3)
+                        await asyncio.sleep(15)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
@@ -41,7 +41,7 @@ async def main_devchecker():
                             try:
                                 again=await app.send_message(bot, "/start")
                                 id=again.id
-                                await asyncio.sleep(3)
+                                await asyncio.sleep(20)
                                 history= app.get_chat_history(bot, limit=1)
                                 async for dead in history:
                                     off=dead.id
@@ -68,7 +68,7 @@ async def main_devchecker():
                 await app.edit_message_text(CHANNEL_ID, MESSAGE_ID, xxx_hehe)
                 print(f"Last checked on: {last_update}")
                 await app.send_message(GRP_ID, f"🚨 I have checked the status of your bot. kindly have a look at : https://t.me/{link}/{MESSAGE_ID}", disable_web_page_preview=True)
-                await asyncio.sleep(580)
+                await asyncio.sleep(540)
                         
 app.run(main_devchecker())
 
