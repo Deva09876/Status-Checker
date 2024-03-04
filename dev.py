@@ -34,7 +34,7 @@ async def main_devchecker():
                         owner="@YouKnowGabru"
                     if bot == "@BTSBeatsBot" or bot == "@AcceptUsersRoBot":
                         owner="@Thelifevalues"
-                    await asyncio.sleep(7)
+                    await asyncio.sleep(5)
                     try:
                         bot_info = await app.get_users(bot)
                     except Exception:
@@ -43,7 +43,7 @@ async def main_devchecker():
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.id
-                        await asyncio.sleep(15)
+                        await asyncio.sleep(20)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
@@ -51,7 +51,7 @@ async def main_devchecker():
                             try:
                                 again=await app.send_message(bot, "/start")
                                 id=again.id
-                                await asyncio.sleep(20)
+                                await asyncio.sleep(100)
                                 history= app.get_chat_history(bot, limit=1)
                                 async for dead in history:
                                     off=dead.id
