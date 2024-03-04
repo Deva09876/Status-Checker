@@ -24,8 +24,16 @@ async def main_devchecker():
                 print("Checking...")
                 xxx_hehe = f"<b>**🏷 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {(await app.get_chat(CHANNEL_ID)).title} ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ**</b>\n\n 📈 | <b><u>ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs</u> 🍂</b>"
                 for bot in BOT_LIST:
-                    if bot == "@phumkallbot":
-                        owner="@devarora"
+                    if bot == "@SpotifyxMusicBot ":
+                        owner="@sexyneo"
+                    if bot == "@MissMishu_bot":
+                        owner="@Ogvenom"
+                    if bot == "@LofiBeatzBot":
+                        owner=="@pasha2op"
+                    if bot == "@Emilymusic_bot":
+                        owner=="@YouKnowGabru"
+                    if bot == "@BTSBeatsBot" or bot == "@AcceptUsersRoBot":
+                        owner=="@Thelifevalues"
                     await asyncio.sleep(7)
                     try:
                         bot_info = await app.get_users(bot)
